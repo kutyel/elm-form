@@ -16,8 +16,8 @@
     "type": "git",
     "url": "git+https://github.com/kutyel/elm-form.git"
   },
-  "author": "Emilien Taque",
-  "license": "MIT",
+  "author": "Flavio Corpa <flaviocorpa@gmail.com>",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/kutyel/elm-form/issues"
   },
