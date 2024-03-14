@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "elm-test",
+    "format": "elm-format src/ --yes",
     "postinstall": "elm-tooling install"
   },
   "repository": {
