@@ -8,20 +8,20 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "node_modules/elm-test/bin/elm-test"
+    "test": "elm-test",
+    "postinstall": "elm-tooling install"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/etaque/elm-form.git"
+    "url": "git+https://github.com/kutyel/elm-form.git"
   },
   "author": "Emilien Taque",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/etaque/elm-form/issues"
+    "url": "https://github.com/kutyel/elm-form/issues"
   },
-  "homepage": "https://github.com/etaque/elm-form#readme",
+  "homepage": "https://github.com/kutyel/elm-form#readme",
   "devDependencies": {
-    "elm-format": "0.8.0",
-    "elm-test": "v0.19.0-beta4"
+    "elm-tooling": "^1.15.0"
   }
 }

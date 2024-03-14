@@ -13,7 +13,7 @@ getValidationExpectation validation ( stringToValidate, validationExpectation ) 
     case validationExpectation of
         Valid ->
             case run validation stringToValidate of
-                Ok resultingString ->
+                Ok _ ->
                     Expect.pass
 
                 Err formWithErrors ->

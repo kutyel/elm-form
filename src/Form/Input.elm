@@ -11,15 +11,13 @@ module Form.Input exposing
 
 -}
 
-import Form exposing (FieldState, Form, InputType(..), Msg(..))
+import Form exposing (FieldState, InputType(..), Msg(..))
 import Form.Error exposing (ErrorValue(..))
-import Form.Field as Field exposing (Field, FieldValue(..))
+import Form.Field exposing (FieldValue(..))
 import Html exposing (..)
 import Html.Attributes as HtmlAttr exposing (..)
 import Html.Events exposing (..)
 import Json.Decode as Json
-import Maybe exposing (andThen)
-import String
 
 
 {-| An input renders Html from a field state and list of additional attributes.

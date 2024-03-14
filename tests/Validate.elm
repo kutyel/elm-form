@@ -4,7 +4,6 @@ import Expect exposing (..)
 import Form
 import Form.Error as Error
 import Form.Field as Field
-import Form.Input as Input
 import Form.Tree as Tree
 import Form.Validate as Validate exposing (Validation)
 import Fuzz exposing (..)

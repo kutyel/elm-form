@@ -1,7 +1,7 @@
 module MetaTests exposing (all)
 
-import Expect exposing (Expectation)
-import Form.Error exposing (ErrorValue)
+import Expect
+import Form.Error
 import Form.Test.Helpers
 import Form.Test.ValidationExpectation as ValidationExpectation
 import Form.Validate as Validate exposing (Validation, string)

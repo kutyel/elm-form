@@ -6,7 +6,7 @@ module Form.Init exposing (setBool, setString, setGroup, setList)
 
 -}
 
-import Form.Field as Field exposing (Field, FieldValue)
+import Form.Field as Field exposing (Field)
 
 
 {-| Builds a tuple of field name and boolean value

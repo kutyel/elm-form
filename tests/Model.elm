@@ -3,7 +3,7 @@ module Model exposing (CustomError(..), Date, Model, Msg(..), Profile, Superpowe
 import Form exposing (Form)
 import Form.Error as Error
 import Form.Field as Field exposing (Field)
-import Form.Validate as Validate exposing (..)
+import Form.Validate exposing (..)
 import Parser exposing ((|.), (|=), Parser)
 import Regex
 
@@ -113,7 +113,7 @@ validateDate =
                 |> Result.mapError (always (Error.value (Error.CustomError InvalidDate)))
 
         -- This should use much more complicated logic to ensure it's actually valid
-        validateDayIsValid date validationField =
+        validateDayIsValid date _ =
             if date.month > 12 || date.month < 1 then
                 Err (Error.value (Error.CustomError InvalidDate))
 

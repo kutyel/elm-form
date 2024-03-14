@@ -9,7 +9,7 @@ module Form.Test exposing (describeValidation, testValidation)
 
 import Form.Test.Helpers as TestHelpers
 import Form.Test.ValidationExpectation exposing (ValidationExpectation(..))
-import Form.Validate as Validate exposing (Validation)
+import Form.Validate as Validate
 import Test exposing (..)
 
 
@@ -56,7 +56,7 @@ testValidation validation (( stringToValidate, validationExpectation ) as valida
                 Valid ->
                     "Valid"
 
-                ValidDecodesTo a ->
+                ValidDecodesTo _ ->
                     "ValidDecodesTo"
 
                 Invalid _ ->

@@ -35,7 +35,7 @@ module Form.Validate exposing
 
 -}
 
-import Dict exposing (Dict)
+import Dict
 import Form.Error as Error exposing (Error, ErrorValue(..))
 import Form.Field as Field exposing (Field, FieldValue(..))
 import Form.Tree as Tree
@@ -304,7 +304,7 @@ maybe validation validationField =
 {-| Fails if `String.isEmpty`.
 -}
 nonEmpty : String -> Validation e String
-nonEmpty s validationField =
+nonEmpty s _ =
     if String.isEmpty s then
         Err (Error.value Empty)
 
@@ -315,7 +315,7 @@ nonEmpty s validationField =
 {-| Min length for String.
 -}
 minLength : Int -> String -> Validation e String
-minLength min s validationField =
+minLength min s _ =
     if String.length s >= min then
         Ok s
 
@@ -326,7 +326,7 @@ minLength min s validationField =
 {-| Max length for String.
 -}
 maxLength : Int -> String -> Validation e String
-maxLength max s validationField =
+maxLength max s _ =
     if String.length s <= max then
         Ok s
 
@@ -337,7 +337,7 @@ maxLength max s validationField =
 {-| Min value for Int.
 -}
 minInt : Int -> Int -> Validation e Int
-minInt min i validationField =
+minInt min i _ =
     if i >= min then
         Ok i
 
@@ -348,7 +348,7 @@ minInt min i validationField =
 {-| Max value for Int.
 -}
 maxInt : Int -> Int -> Validation e Int
-maxInt max i validationField =
+maxInt max i _ =
     if i <= max then
         Ok i
 
@@ -359,7 +359,7 @@ maxInt max i validationField =
 {-| Min value for Float.
 -}
 minFloat : Float -> Float -> Validation e Float
-minFloat min i validationField =
+minFloat min i _ =
     if i >= min then
         Ok i
 
@@ -370,7 +370,7 @@ minFloat min i validationField =
 {-| Max value for Float.
 -}
 maxFloat : Float -> Float -> Validation e Float
-maxFloat max i validationField =
+maxFloat max i _ =
     if i <= max then
         Ok i
 
@@ -381,7 +381,7 @@ maxFloat max i validationField =
 {-| Validates format of the string.
 -}
 format : Regex -> String -> Validation e String
-format regex s validationField =
+format regex s _ =
     if Regex.contains regex s then
         Ok s
 
@@ -413,7 +413,7 @@ email =
 {-| Check if the string is included in the given list.
 -}
 includedIn : List String -> String -> Validation e String
-includedIn items s validationField =
+includedIn items s _ =
     if List.member s items then
         Ok s
 
@@ -424,14 +424,14 @@ includedIn items s validationField =
 {-| A validation that always fails. Useful for contextual validation.
 -}
 fail : Error e -> Validation e a
-fail error validationField =
+fail error _ =
     Err error
 
 
 {-| A validation that always succeeds. Useful for contextual validation.
 -}
 succeed : a -> Validation e a
-succeed a validationField =
+succeed a _ =
     Ok a
 
 

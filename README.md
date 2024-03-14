@@ -1,6 +1,10 @@
 # Elm Form
 
-HTML live form builders and validation for Elm. [![Build Status](https://travis-ci.org/etaque/elm-form.svg?branch=master)](https://travis-ci.org/etaque/elm-form)
+[![Elm CI](https://github.com/kutyel/elm-form/workflows/Elm%20CI/badge.svg)](https://github.com/kutyel/elm-form/actions)
+
+> This is a fork from [etaque/elm-form](https://github.com/etaque/elm-form) compatible with `elm-explorations/elm-test@2.2.0`
+
+HTML live form builders and validation for Elm.
 
     elm package install etaque/elm-form
 
@@ -12,14 +16,13 @@ We have a dedicated channel in [Elm slack](https://elmlang.herokuapp.com/), join
 
 ## Features
 
-* Validation API similar to `Json.Decode` with the standard `map`, `andThen`, etc: you either get the desired output value or all field errors
-* HTML inputs helpers with pre-wired handlers for live validation
-* Suite of basic validations, with a way to add your own
-* Unlimited fields, see `andMap` function (as in `Json.Extra`)
-* Nested fields (`foo.bar.baz`) and lists (`todos.1.checked`) enabling rich form build
+- Validation API similar to `Json.Decode` with the standard `map`, `andThen`, etc: you either get the desired output value or all field errors
+- HTML inputs helpers with pre-wired handlers for live validation
+- Suite of basic validations, with a way to add your own
+- Unlimited fields, see `andMap` function (as in `Json.Extra`)
+- Nested fields (`foo.bar.baz`) and lists (`todos.1.checked`) enabling rich form build
 
 See [complete example here](http://etaque.github.io/elm-form/example/) ([source code](https://github.com/etaque/elm-form/tree/master/example)).
-
 
 ## Basic usage
 
@@ -145,14 +148,13 @@ app =
 
 ```
 
-
 ## Advanced usage
 
 ### Custom inputs
 
- * For rendering, `Form.getFieldAsString`/`Bool` provides a `FieldState` record with all required fields (see package doc).
+- For rendering, `Form.getFieldAsString`/`Bool` provides a `FieldState` record with all required fields (see package doc).
 
- * For event handling, see all field related messages in `Form.Msg` type.
+- For event handling, see all field related messages in `Form.Msg` type.
 
 Overall, having a look at current [helpers source code](https://github.com/etaque/elm-form/blob/master/src/Form/Input.elm) should give you a good idea of the thing.
 
@@ -168,7 +170,7 @@ Form.succeed Player
 
 ### Nested records
 
-* Validation:
+- Validation:
 
 ```elm
 validation =
@@ -183,7 +185,7 @@ validation =
         )
 ```
 
-* View:
+- View:
 
 ```elm
 Input.textInput (Form.getFieldAsString "options.foo" form) []
@@ -239,10 +241,9 @@ itemView form i =
         ]
 ```
 
-
 ### Initial values and reset
 
-* At form initialization:
+- At form initialization:
 
 ```elm
 import Form.Field as Field
@@ -267,16 +268,15 @@ initialForm =
 
 See `Form.Field` type for more options.
 
-* On demand:
+- On demand:
 
 ```elm
 button [ onClick (Form.Reset initialFields) ] [ text "Reset" ]
 ```
 
-*Note:* To have programmatic control over any `input[type=text]`/`textarea` value, like reseting or changing the value, you must set the `value` attribute with `Maybe.withDefault "" state.value`, as seen [here](https://github.com/etaque/elm-form/pull/57/files#diff-bfb877e82b2c89b329fcda943a258611R50). There's a downside of doing this: if the user types too fast, the caret can go crazy.
+_Note:_ To have programmatic control over any `input[type=text]`/`textarea` value, like reseting or changing the value, you must set the `value` attribute with `Maybe.withDefault "" state.value`, as seen [here](https://github.com/etaque/elm-form/pull/57/files#diff-bfb877e82b2c89b329fcda943a258611R50). There's a downside of doing this: if the user types too fast, the caret can go crazy.
 
 More info: https://github.com/evancz/elm-html/pull/81#issuecomment-145676200
-
 
 ### Custom errors
 
@@ -289,7 +289,6 @@ validation =
 
 -- creates `Form.Error.CustomError Fatal`
 ```
-
 
 ### Async validation
 

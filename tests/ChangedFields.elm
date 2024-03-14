@@ -4,7 +4,7 @@ import Expect exposing (..)
 import Form exposing (Form)
 import Form.Field as Field
 import Model
-import Set exposing (Set)
+import Set
 import Test exposing (..)
 
 
@@ -87,8 +87,3 @@ formStringInput name value form =
 initialForm : Form Model.CustomError Model.User
 initialForm =
     Form.initial Model.initialFields Model.validate
-
-
-validatedForm : Form Model.CustomError Model.User
-validatedForm =
-    Form.update Model.validate Form.Validate initialForm

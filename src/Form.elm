@@ -34,8 +34,7 @@ import Dict exposing (Dict)
 import Form.Error as Error exposing (Error, ErrorValue)
 import Form.Field as Field exposing (Field, FieldValue)
 import Form.Tree as Tree
-import Form.Validate as Validate exposing (Validation)
-import Result
+import Form.Validate exposing (Validation)
 import Set exposing (Set)
 
 
