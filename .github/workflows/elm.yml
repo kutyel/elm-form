@@ -15,6 +15,6 @@ jobs:
       - name: Compile Elm
         run: elm make src/*.elm
       - name: Run elm-format
-        run: yarn run format
+        run: npx elm-format --validate .
       - name: Run elm-tests
         run: yarn test
