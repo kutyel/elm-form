@@ -1,6 +1,6 @@
 {
     "type": "package",
-    "name": "kutyel/elm-form",
+    "name": "scrive/elm-form",
     "summary": "Live validation of form inputs in Elm",
     "license": "BSD-3-Clause",
     "version": "1.0.0",
