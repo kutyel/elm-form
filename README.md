@@ -1,18 +1,14 @@
 # Elm Form
 
-[![Elm CI](https://github.com/kutyel/elm-form/workflows/Elm%20CI/badge.svg)](https://github.com/kutyel/elm-form/actions)
+[![Elm CI](https://github.com/kutyel/elm-form/workflows/Elm%20CI/badge.svg)](https://github.com/scrive/elm-form/actions)
 
 > This is a fork from [etaque/elm-form](https://github.com/etaque/elm-form) compatible with `elm-explorations/elm-test@2.2.0`
 
 HTML live form builders and validation for Elm.
 
-    elm package install etaque/elm-form
+    elm package install scrive/elm-form
 
 For when the classical "a message per field" doesn't work well for you, at the price of losing some type safety (field names are made of strings, see [#97](https://github.com/etaque/elm-form/issues/97)).
-
-## Support
-
-We have a dedicated channel in [Elm slack](https://elmlang.herokuapp.com/), join us in `#elm-form` for any question, support or issues coordination.
 
 ## Features
 
@@ -22,12 +18,10 @@ We have a dedicated channel in [Elm slack](https://elmlang.herokuapp.com/), join
 - Unlimited fields, see `andMap` function (as in `Json.Extra`)
 - Nested fields (`foo.bar.baz`) and lists (`todos.1.checked`) enabling rich form build
 
-See [complete example here](http://etaque.github.io/elm-form/example/) ([source code](https://github.com/etaque/elm-form/tree/master/example)).
-
 ## Basic usage
 
-See the [example validation test suite](https://github.com/etaque/elm-form/blob/master/tests/ValidationTests.elm)
-and [test helper function docs](http://package.elm-lang.org/packages/etaque/elm-form/latest/Form-Test)
+See the [example validation test suite](https://github.com/scrive/elm-form/blob/master/tests/ValidationTests.elm)
+and [test helper function docs](http://package.elm-lang.org/packages/scrive/elm-form/latest/Form-Test)
 for how to test-drive validations.
 
 ```elm
@@ -156,7 +150,7 @@ app =
 
 - For event handling, see all field related messages in `Form.Msg` type.
 
-Overall, having a look at current [helpers source code](https://github.com/etaque/elm-form/blob/master/src/Form/Input.elm) should give you a good idea of the thing.
+Overall, having a look at current [helpers source code](https://github.com/scrive/elm-form/blob/master/src/Form/Input.elm) should give you a good idea of the thing.
 
 ### Incremental validation
 
