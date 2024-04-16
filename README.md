@@ -1,12 +1,12 @@
 # Elm Form
 
-[![Elm CI](https://github.com/kutyel/elm-form/workflows/Elm%20CI/badge.svg)](https://github.com/kutyel/elm-form/actions)
+[![Elm CI](https://github.com/scrive/elm-form/workflows/Elm%20CI/badge.svg)](https://github.com/scrive/elm-form/actions)
 
 > This is a fork from [etaque/elm-form](https://github.com/etaque/elm-form) compatible with `elm-explorations/elm-test@2.2.0`
 
 HTML live form builders and validation for Elm.
 
-    elm package install etaque/elm-form
+    elm package install scrive/elm-form
 
 For when the classical "a message per field" doesn't work well for you, at the price of losing some type safety (field names are made of strings, see [#97](https://github.com/etaque/elm-form/issues/97)).
 

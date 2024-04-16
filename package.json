@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kutyel/elm-form.git"
+    "url": "git+https://github.com/scrive/elm-form.git"
   },
   "author": "Flavio Corpa <flaviocorpa@gmail.com>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/kutyel/elm-form/issues"
+    "url": "https://github.com/scrive/elm-form/issues"
   },
-  "homepage": "https://github.com/kutyel/elm-form#readme",
+  "homepage": "https://github.com/scrive/elm-form#readme",
   "devDependencies": {
     "elm-tooling": "^1.15.0"
   }
