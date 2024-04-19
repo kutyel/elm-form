@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/scrive/elm-form.git"
   },
-  "author": "Flavio Corpa <flaviocorpa@gmail.com>",
+  "author": "Emilien Taque",
   "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/scrive/elm-form/issues"
